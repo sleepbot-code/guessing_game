@@ -16,7 +16,7 @@ fn main() {
     let mut guesses: Vec<u8> = Vec::new();
     let secret_number: u8 = rand::thread_rng().gen_range(1..=100);
     loop{
-        println!("Guess: ");
+        println!("Guess in range 1 to 100, both inclusive: ");
         let mut guess = String::new();
         io::stdin().read_line(&mut guess).expect("Fail");
         let guess: u8 = guess.trim().parse().expect("Enter number!");
