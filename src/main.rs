@@ -27,5 +27,5 @@ fn main() {
         }
     }
     println!("Your Guesses are: {:?}", guesses);
-    println!("Number of Guesses: {}", guesses.len())
+    println!("Number of Guesses: {}", guesses.len());
 }
