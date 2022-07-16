@@ -3,7 +3,7 @@ use rand::Rng;
 use std::cmp::Ordering;
 
 
-fn matching(guessed: u8, secret_number: u8){
+fn matching(guessed: u8, secret_number: u8) -> (){
     match guessed.cmp(&secret_number) {
         Ordering::Less => println!("Too small!"),
         Ordering::Greater => println!("Too big!"),
@@ -17,7 +17,7 @@ fn main() {
     let secret_number: u8 = rand::thread_rng().gen_range(1..=100);
     println!("All guesses in range 1 to 100, both inclusive");
     loop{
-        println!("Guess: ")
+        println!("Guess: ");
         let mut guess = String::new();
         io::stdin().read_line(&mut guess).expect("Fail");
         let guess: u8 = guess.trim().parse().expect("Enter number!");
